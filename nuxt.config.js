@@ -1,5 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 
+require('dotenv').config()
+
 export default {
   mode: 'universal',
   /*
@@ -36,6 +38,7 @@ export default {
   */
   buildModules: [
     '@nuxtjs/vuetify',
+    '@nuxtjs/dotenv',
   ],
   /*
   ** Nuxt.js modules
@@ -63,6 +66,11 @@ export default {
       }
     }
   },
+  env: {
+    SQUARE_API_BASE_URL: process.env.SQUARE_API_BASE_URL,
+    SQUARE_API_ACCESS_TOKEN: process.env.SQUARE_API_ACCESS_TOKEN,
+
+  },
   /*
   ** Build configuration
   */
@@ -72,5 +80,6 @@ export default {
     */
     extend (config, ctx) {
     }
-  }
+  },
+
 }

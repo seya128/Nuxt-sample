@@ -18,6 +18,7 @@
           Welcome to the Vuetify + Nuxt.js template
         </v-card-title>
         <v-card-text>
+          <p>{{baseUrl}}</p>
           <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
           <p>
             For more information on Vuetify, check out the <a
@@ -87,6 +88,9 @@ export default {
   components: {
     Logo,
     VuetifyLogo
-  }
+  },
+  async asyncData({ env }) {
+    return {baseUrl: env.SQUARE_API_BASE_URL}
+  },
 }
 </script>

@@ -7,9 +7,9 @@
   "scripts": {
     "dev": "nuxt",
     "lambda": "netlify-lambda serve functions",
-    "build": "netlify-lambda build && nuxt build",
+    "build": "netlify-lambda build functions && nuxt build",
     "start": "nuxt start",
-    "generate": "netlify-lambda build && nuxt generate"
+    "generate": "netlify-lambda build functions && nuxt generate"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.9.6",

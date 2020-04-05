@@ -67,6 +67,8 @@ export default {
     }
   },
   env: {
+    URL: process.env.URL,
+    FRONT_API_BASE_URL: process.env.FRONT_API_BASE_URL,
     SQUARE_API_BASE_URL: process.env.SQUARE_API_BASE_URL,
     SQUARE_API_ACCESS_TOKEN: process.env.SQUARE_API_ACCESS_TOKEN,
 

@@ -18,7 +18,6 @@
           Welcome to the Vuetify + Nuxt.js template
         </v-card-title>
         <v-card-text>
-          <p>{{baseUrl}}</p>
           <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
           <p>
             For more information on Vuetify, check out the <a
@@ -83,14 +82,21 @@
 <script>
 import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
+// const axios = require('axios');
 
 export default {
   components: {
     Logo,
     VuetifyLogo
   },
-  async asyncData({ env }) {
-    return {baseUrl: env.SQUARE_API_BASE_URL}
-  },
+  // async asyncData({ env }) {
+  //   const result = await axios.get("http://localhost:9000/sq_locations");
+  //   console.log(result.data);
+  //   return {
+  //     baseUrl: env.SQUARE_API_BASE_URL,
+  //     locations: result.data,
+  //     locationsStr: JSON.stringify(result.data),
+  //   }
+  // },
 }
 </script>

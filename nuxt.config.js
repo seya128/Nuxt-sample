@@ -44,6 +44,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    "@nuxtjs/axios",
   ],
   /*
   ** vuetify module configuration
@@ -73,6 +74,11 @@ export default {
     SQUARE_API_ACCESS_TOKEN: process.env.SQUARE_API_ACCESS_TOKEN,
 
   },
+  axios: {
+    baseURL: process.env.DEPLOY_PRIME_URL + process.env.FRONT_API_BASE_URL,
+    browserBaseURL: process.env.FRONT_API_BASE_URL,
+  },
+
   /*
   ** Build configuration
   */

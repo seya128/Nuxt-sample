@@ -19,17 +19,13 @@
 </template>
 
 <script>
-const axios = require('axios');
-
 export default {
-  async asyncData({ env }) {
-    console.log(process.env.FRONT_API_BASE_URL);
-    const result = await axios.get("/sq_locations",{
-      baseURL: process.env.FRONT_API_BASE_URL
-    });
-    console.log(result.data);
+  async asyncData({ $axios }) {
+    console.log(process.env.NODE_ENV);
+    const result = await $axios.$get("/sq_locations");
+    console.log(result);
     return {
-      locations: result.data.locations,
+      locations: result.locations,
     }
   },
 }

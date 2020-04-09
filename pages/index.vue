@@ -82,11 +82,21 @@
 <script>
 import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
+// const axios = require('axios');
 
 export default {
   components: {
     Logo,
     VuetifyLogo
-  }
+  },
+  // async asyncData({ env }) {
+  //   const result = await axios.get("http://localhost:9000/sq_locations");
+  //   console.log(result.data);
+  //   return {
+  //     baseUrl: env.SQUARE_API_BASE_URL,
+  //     locations: result.data,
+  //     locationsStr: JSON.stringify(result.data),
+  //   }
+  // },
 }
 </script>

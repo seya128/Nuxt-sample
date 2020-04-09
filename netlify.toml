@@ -1,0 +1,7 @@
+[build]
+  Command = "yarn generate"
+  functions = "dist_functions"
+  publish = "dist"
+
+[build.environment]
+  FRONT_API_BASE_URL = "/.netlify/functions"
